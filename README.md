@@ -39,7 +39,8 @@ The core goal is to foster tightly coupled perception, reasoning, and decision-m
 
 ## News
 
-- **May 12, 2026**: Track2 submission guidance updated (See https://github.com/ego-link/egolink2026/tree/main/doc/track2 for details).
+- **May 12, 2026**: We released updated labels for **part 1** of the Track 1 training set. **Part 2** will be our curated multiple-choice (MCQ) benchmark; we expect to release it in about one week. (See https://github.com/ego-link/egolink2026/blob/main/dataset/track1/E3_train.json for details.)
+- **May 12, 2026**: Track 2 submission guidance updated (See https://github.com/ego-link/egolink2026/tree/main/doc/track2 for details).
 - **Apr 15, 2026**: Registration is now open. Welcome to sign up.
 - **Apr 2, 2026**: Official challenge website initialized.
 
