@@ -4,11 +4,11 @@ We propose a framework for evaluating (MLLM) customer service agents (under test
 
 ![Figure 1](figure/fig1.png)
 
-## Competition Overview
+## Overview
 
 ### Timeline
 
-- **Offline Testing Phase**: 2026.05.18 - 2026.06.25
+- **Testing Phase**: 2026.05.18 - 2026.06.25
 - **Final Evaluation Phase**: 2026.06.18 - 2026.06.25
 - **Scenarios**: Retail (10), Kitchen (4), Restaurant (5), Order (2)
 
