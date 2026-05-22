@@ -278,6 +278,7 @@ results/
 ```
 The files in the above directory are for reference only and are not the standard answers.
 
+
 Each JSON file contains:
 - `task_id`: Task identifier
 - `dialogue`: Conversation history between user and agent
@@ -303,6 +304,9 @@ Each evaluation file contains:
 - `result_based.success_rate`: Whether tool results are correct
 - `joint_success.success_rate`: Both tool and result are correct
 - `micro_tool_stats.micro_accuracy`: Tool call accuracy
+
+> [NOTE]
+> Evaluation is based on the benchmark-provided database and tool outputs in this repository. In some cases, the dataset values may differ from external real-world knowledge sources. During evaluation, the benchmark database/tool results are treated as the only ground truth. 
 
 ### Evaluation Criteria
 
