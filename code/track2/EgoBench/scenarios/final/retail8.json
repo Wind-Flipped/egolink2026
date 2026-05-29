@@ -34,7 +34,7 @@
         }
       }
     ],
-    "scenario_id": 1,
+    "task_id": 1,
     "image_name": "retail8",
     "image_path": "retail8.mp4",
     "image_description": "You point first at a row of orange boxes on the second shelf, then move your finger down and right to a dark brown rectangular box on the third shelf—its shape is wide and flat, with a glossy front panel showing a cookie and nut. You hold your finger there briefly before lowering your hand.",
@@ -152,7 +152,7 @@
         }
       }
     ],
-    "scenario_id": 2,
+    "task_id": 2,
     "image_name": "retail8",
     "image_path": "retail8.mp4",
     "image_description": "You point first at a row of orange boxes on the second shelf, then move your finger down and right to a dark brown rectangular box on the third shelf—its shape is wide and flat, with a glossy front panel showing a cookie and nut. You hold your finger there briefly before lowering your hand.",
@@ -211,7 +211,7 @@
         }
       }
     ],
-    "scenario_id": 3,
+    "task_id": 3,
     "image_name": "retail8",
     "image_path": "retail8.mp4",
     "image_description": "You point first at a row of orange boxes on the second shelf, then move your finger down and right to a dark brown rectangular box on the third shelf—its shape is wide and flat, with a glossy front panel showing a cookie and nut. You hold your finger there briefly before lowering your hand.",
@@ -297,7 +297,7 @@
         }
       }
     ],
-    "scenario_id": 4,
+    "task_id": 4,
     "image_name": "retail8",
     "image_path": "retail8.mp4",
     "image_description": "You point first at a row of orange boxes on the second shelf, then move your finger down and right to a dark brown rectangular box on the third shelf—its shape is wide and flat, with a glossy front panel showing a cookie and nut. You hold your finger there briefly before lowering your hand.",
@@ -396,7 +396,7 @@
         }
       }
     ],
-    "scenario_id": 5,
+    "task_id": 5,
     "image_name": "retail8",
     "image_path": "retail8.mp4",
     "image_description": "You point first at a row of orange boxes on the second shelf, then move your finger down and right to a dark brown rectangular box on the third shelf—its shape is wide and flat, with a glossy front panel showing a cookie and nut. You hold your finger there briefly before lowering your hand.",
@@ -465,7 +465,7 @@
         }
       }
     ],
-    "scenario_id": 6,
+    "task_id": 6,
     "image_name": "retail8",
     "image_path": "retail8.mp4",
     "image_description": "You point first at a row of orange boxes on the second shelf, then move your finger down and right to a dark brown rectangular box on the third shelf—its shape is wide and flat, with a glossy front panel showing a cookie and nut. You hold your finger there briefly before lowering your hand.",
@@ -519,7 +519,7 @@
         }
       }
     ],
-    "scenario_id": 7,
+    "task_id": 7,
     "image_name": "retail8",
     "image_path": "retail8.mp4",
     "image_description": "You point first at a row of orange boxes on the second shelf, then move your finger down and right to a dark brown rectangular box on the third shelf—its shape is wide and flat, with a glossy front panel showing a cookie and nut. You hold your finger there briefly before lowering your hand.",
@@ -606,7 +606,7 @@
         }
       }
     ],
-    "scenario_id": 8,
+    "task_id": 8,
     "image_name": "retail8",
     "image_path": "retail8.mp4",
     "image_description": "You point first at a row of orange boxes on the second shelf, then move your finger down and right to a dark brown rectangular box on the third shelf—its shape is wide and flat, with a glossy front panel showing a cookie and nut. You hold your finger there briefly before lowering your hand.",
@@ -645,7 +645,7 @@
         }
       }
     ],
-    "scenario_id": 9,
+    "task_id": 9,
     "image_name": "retail8",
     "image_path": "retail8.mp4",
     "image_description": "You point first at a row of orange boxes on the second shelf, then move your finger down and right to a dark brown rectangular box on the third shelf—its shape is wide and flat, with a glossy front panel showing a cookie and nut. You hold your finger there briefly before lowering your hand.",
@@ -724,7 +724,7 @@
         }
       }
     ],
-    "scenario_id": 10,
+    "task_id": 10,
     "image_name": "retail8",
     "image_path": "retail8.mp4",
     "image_description": "You point first at a row of orange boxes on the second shelf, then move your finger down and right to a dark brown rectangular box on the third shelf—its shape is wide and flat, with a glossy front panel showing a cookie and nut. You hold your finger there briefly before lowering your hand.",
@@ -833,7 +833,7 @@
         }
       }
     ],
-    "scenario_id": 11,
+    "task_id": 11,
     "image_name": "retail8",
     "image_path": "retail8.mp4",
     "image_description": "You point first at a row of orange boxes on the second shelf, then move your finger down and right to a dark brown rectangular box on the third shelf—its shape is wide and flat, with a glossy front panel showing a cookie and nut. You hold your finger there briefly before lowering your hand.",
@@ -943,7 +943,7 @@
         }
       }
     ],
-    "scenario_id": 12,
+    "task_id": 12,
     "image_name": "retail8",
     "image_path": "retail8.mp4",
     "image_description": "You point first at a row of orange boxes on the second shelf, then move your finger down and right to a dark brown rectangular box on the third shelf—its shape is wide and flat, with a glossy front panel showing a cookie and nut. You hold your finger there briefly before lowering your hand.",
@@ -993,7 +993,7 @@
         }
       }
     ],
-    "scenario_id": 13,
+    "task_id": 13,
     "image_name": "retail8",
     "image_path": "retail8.mp4",
     "image_description": "You point first at a row of orange boxes on the second shelf, then move your finger down and right to a dark brown rectangular box on the third shelf—its shape is wide and flat, with a glossy front panel showing a cookie and nut. You hold your finger there briefly before lowering your hand.",
@@ -1054,7 +1054,7 @@
         }
       }
     ],
-    "scenario_id": 14,
+    "task_id": 14,
     "image_name": "retail8",
     "image_path": "retail8.mp4",
     "image_description": "You point first at a row of orange boxes on the second shelf, then move your finger down and right to a dark brown rectangular box on the third shelf—its shape is wide and flat, with a glossy front panel showing a cookie and nut. You hold your finger there briefly before lowering your hand.",
@@ -1112,7 +1112,7 @@
         }
       }
     ],
-    "scenario_id": 15,
+    "task_id": 15,
     "image_name": "retail8",
     "image_path": "retail8.mp4",
     "image_description": "You point first at a row of orange boxes on the second shelf, then move your finger down and right to a dark brown rectangular box on the third shelf—its shape is wide and flat, with a glossy front panel showing a cookie and nut. You hold your finger there briefly before lowering your hand.",
@@ -1226,7 +1226,7 @@
         }
       }
     ],
-    "scenario_id": 16,
+    "task_id": 16,
     "image_name": "retail8",
     "image_path": "retail8.mp4",
     "image_description": "You point first at a row of orange boxes on the second shelf, then move your finger down and right to a dark brown rectangular box on the third shelf—its shape is wide and flat, with a glossy front panel showing a cookie and nut. You hold your finger there briefly before lowering your hand.",
@@ -1277,7 +1277,7 @@
         }
       }
     ],
-    "scenario_id": 17,
+    "task_id": 17,
     "image_name": "retail8",
     "image_path": "retail8.mp4",
     "image_description": "You point first at a row of orange boxes on the second shelf, then move your finger down and right to a dark brown rectangular box on the third shelf—its shape is wide and flat, with a glossy front panel showing a cookie and nut. You hold your finger there briefly before lowering your hand.",
@@ -1332,7 +1332,7 @@
         }
       }
     ],
-    "scenario_id": 18,
+    "task_id": 18,
     "image_name": "retail8",
     "image_path": "retail8.mp4",
     "image_description": "You point first at a row of orange boxes on the second shelf, then move your finger down and right to a dark brown rectangular box on the third shelf—its shape is wide and flat, with a glossy front panel showing a cookie and nut. You hold your finger there briefly before lowering your hand.",
