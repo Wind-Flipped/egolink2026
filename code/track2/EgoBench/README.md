@@ -4,6 +4,9 @@ We propose a framework for evaluating (MLLM) customer service agents (under test
 
 ![Figure 1](figure/fig1.png)
 
+## News
+2026.05.29: We have made a consolidated update to address several issues identified in the test set release, including incorrect video links (order1), task–ground-truth mismatches (retail1, retail7, and retail8), and inconsistencies in tool design (order and kitchen scenarios). Please make sure to update your codebase accordingly.
+
 ## Overview
 
 ### Timeline
