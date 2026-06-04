@@ -459,10 +459,20 @@ class OrderDB:
         set_meal_key = set_meal_name.lower()
         if set_meal_key in store['set_meals']:
             set_meal = store['set_meals'][set_meal_key]
+            if set_meal.set_meal_price and set_meal.set_meal_price > 0:
+                price = set_meal.set_meal_price
+            else:
+                price = 0.0
+                for included_item in set_meal.included_dishes:
+                    included_dish_name = included_item.get("dish_name", " ").lower()
+                    included_qty = included_item.get("quantity", 1.0)
+                    if included_dish_name in store["catalog"]:
+                        included_dish = store["catalog"][included_dish_name]
+                        price += included_dish.price * included_dish.discount * included_qty
             return {
                 "name": set_meal.name,
                 "included_dishes": set_meal.included_dishes,
-                "price": set_meal.set_meal_price,
+                "price": price,
                 "discount": set_meal.set_meal_discount
             }
         else:
