@@ -39,7 +39,7 @@ The core goal is to foster tightly coupled perception, reasoning, and decision-m
 
 ## News
 
-- **May 12, 2026**: We released updated labels for **part 1** of the Track 1 training set. **Part 2** will be our curated multiple-choice (MCQ) benchmark; we expect to release it in about one week. (See https://github.com/ego-link/egolink2026/blob/main/dataset/track1/E3_train.json for details.)
+- **May 12, 2026**: We released updated labels for **part 1** of the Track 1 training set (See https://github.com/ego-link/egolink2026/blob/main/dataset/track1/E3_train.json for details). **Part 2**: MCQ data released at https://github.com/ego-link/egolink2026/blob/main/dataset/track1/train_MCQ.jsonl. **Important Note**: Please use the video data from the E3 dataset paired with our label information. Do not use the original labels from the E3 dataset.
 - **May 12, 2026**: Track 2 submission guidance updated (See https://github.com/ego-link/egolink2026/tree/main/doc/track2 for details).
 - **Apr 15, 2026**: Registration is now open. Welcome to sign up.
 - **Apr 2, 2026**: Official challenge website initialized.
@@ -77,7 +77,12 @@ Key capabilities:
 
 ### Track 1
 
-- **Foundation**: Based on the E3 egocentric emotion dataset.
+The Track 1 dataset comprises three components:
+
+- **E3 Videos**: Video data from the [E3 egocentric emotion dataset](https://github.com/Exploring-Embodied-Emotion-official/E3/tree/main/dataset).
+- **Labels**: Updated training labels in [`E3_train.json`](https://github.com/ego-link/egolink2026/blob/main/dataset/track1/E3_train.json). Use these labels with the E3 videos; do not use the original E3 labels.
+- **MCQ**: Curated multiple-choice questions in [`train_MCQ.jsonl`](https://github.com/ego-link/egolink2026/blob/main/dataset/track1/train_MCQ.jsonl).
+
 - **Scale**: 20,000+ egocentric clips and 70+ hours of video.
 - **Coverage**: Meetings, family, education, social gatherings, and service scenarios.
 - **Participants**: 500+ individuals with diverse demographics.
