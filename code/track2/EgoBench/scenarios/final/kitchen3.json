@@ -294,7 +294,7 @@
         "parameters": {
           "user_id": "cook_003",
           "ingredient_name": "Banana",
-          "quantity": "6"
+          "quantity": "12"
         }
       },
       {
@@ -958,21 +958,6 @@
         }
       },
       {
-        "tool_name": "remove_from_shopping_list",
-        "parameters": {
-          "user_id": "cook_010",
-          "ingredient_name": "Lamb"
-        }
-      },
-      {
-        "tool_name": "add_to_shopping_list",
-        "parameters": {
-          "user_id": "cook_010",
-          "ingredient_name": "Lamb",
-          "quantity": "2.5"
-        }
-      },
-      {
         "tool_name": "tally_total_nutritional_characteristics",
         "parameters": {
           "user_id": "cook_010",
@@ -1296,7 +1281,7 @@
         "parameters": {
           "user_id": "cook_003",
           "ingredient_name": "Cod",
-          "quantity": "1.8"
+          "quantity": "2.0"
         }
       },
       {

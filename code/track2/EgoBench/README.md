@@ -4,14 +4,11 @@ We propose a framework for evaluating (MLLM) customer service agents (under test
 
 ![Figure 1](figure/fig1.png)
 
-## News
-2026.05.29: We have made a consolidated update to address several issues identified in the test set release, including incorrect video links (order1), task–ground-truth mismatches (retail1, retail7, and retail8), and inconsistencies in tool design (order and kitchen scenarios). Please make sure to update your codebase accordingly.
-
-## Overview
+## Competition Overview
 
 ### Timeline
 
-- **Testing Phase**: 2026.05.18 - 2026.06.25
+- **Offline Testing Phase**: 2026.05.18 - 2026.06.25
 - **Final Evaluation Phase**: 2026.06.18 - 2026.06.25
 - **Scenarios**: Retail (10), Kitchen (4), Restaurant (5), Order (2)
 
@@ -36,13 +33,11 @@ During the **Final Evaluation Phase (2026.06.18 - 2026.06.25)**, 100 tasks will 
 | Order | 2 |
 
 
-
-
 ## Configuration
 
 ### 1. User Agent Configuration (`config/user_agent_config.py`)
 
-We have already implemented the prompts and the corresponding framework for the simulated user. You only need to follow the steps below to configure the LLM that drives the simulated user framework, whether through local deployment or via an API. No other modifications are required.
+We have already implemented the prompts and corresponding framework for the simulated user; you only need to configure the specific deployment of the simulated user themselves, whether via local deployment or by using an API. Configure the model used to simulated user behavior.
 
 ```python
 # Default: Qwen3.5-397B-A17B
@@ -65,13 +60,13 @@ export LLM_API_BASE_URL="https://your-api-endpoint.com/v1"
 > [NOTE]
 > This part is not required for setup, but helps developers understand the design.
 
-> The simulated user framework need to ensure that the user's responses satisfy the following points. The simulated user is considered successful when the user completes all instructions without issues in the following dimensions:
+> We need to ensure that our user's responses satisfy the following points. The simulated user is considered successful when the user completes all instructions without issues in the following dimensions:
 > - **Role Consistency**: The user maintains their assigned role throughout the conversation
 > - **Instruction Following & Anti-Hallucination**: The user follows the given instructions and does not generate hallucinated information
 > - **Resilience & Anti-Interference**: The user is not misled by the agent's confusing responses
 > - **Contextual Robustness**: The user maintains context and does not contradict previous statements
 
-> We have evaluated various open-source models for simulating user behavior. The success rate (percentage of tasks where the user successfully completes all instructions) is as follows. To more accurately evaluate the capabilities of the service agent you develop, we recommend using a larger-parameter model to drive the simulated user framework.:
+> We have evaluated various open-source models for simulating user behavior. The success rate (percentage of tasks where the user successfully completes all instructions) is as follows:
 
 > | Model | Success Rate |
 > |-------|----------------------------|
@@ -98,7 +93,7 @@ SERVICE_API_KEY = os.environ.get("SERVICE_API_KEY", os.environ.get("API_KEY", ""
 SERVICE_API_BASE_URL = os.environ.get("SERVICE_API_BASE_URL", "https://api.example.com/v1")
 ```
 
-Service agents(under test) can only output two types of content within the sandbox: natural language responses for conversational engagement with the user, and tool calls that either retrieve information or modify the database as requested.
+Service agents(under test) can output two types of content within the sandbox: natural language responses for conversational engagement with the user, and tool calls that either retrieve information or modify the database as requested.
 
 #### Tool Call Format
 When the service agent needs to invoke tools, it must output **ONLY** a JSON array with the following format:
@@ -130,19 +125,12 @@ When **NOT** calling tools, the service agent should respond in natural, concise
 
 #### Output Rules Summary
 
-| Type | Output Format |
+| Scenario | Output Format |
 |----------|---------------|
 | Calling tools | JSON array only: `[{"tool_name": "...", "parameters": {...}}]` |
-| Response for users | Natural language response only |
+| Not calling tools | Natural language response only |
 
 **Never mix formats** - Either output pure JSON OR pure natural language in a single response 
-
-** Each task interaction has two stopping conditions **:
-1. The simulated user determines from the agent’s dialogue that the agent has completed the entire task and returns "STOP".
-2. The conversation between the user and the agent reaches 10 turns. Only dialogue turns are counted here; turns involving tool calls made by the user are not included.
-The interaction ends when either of the above conditions is met.
-This functionality has already been implemented in the sandbox, so participants do not need to implement it themselves. This explanation is provided only to help participants better understand the interaction process.
-
 
 #### Video Storage Configuration
 
@@ -154,7 +142,6 @@ VIDEO_MODE = "local"
 VIDEO_LOCAL_PATH = "./videos"
 
 # Option 2: Use public URLs
-# Participants need to download the video themselves and upload it to a publicly accessible online location.
 VIDEO_MODE = "url"
 # Set via environment variable:
 export VIDEO_URL_MAPPING='{"retail1.mp4": "https://example.com/retail1.mp4"}'
@@ -239,8 +226,6 @@ python run/multi_agent.py \
   --summary_user \
   --num_tasks 10
 ```
-> [NOTE]
-> The sandbox already resets the database state after each task is completed, ensuring that the database state is correct for the next task interaction. However, please note that only one agent is allowed to interact with the sandbox within a single process. If you need to run experiments in parallel, please launch multiple sandbox instances.
 
 ## Prompt Structure
 
@@ -279,11 +264,6 @@ results/
     ├── kitchen1_easy.json
     └── ...
 ```
-The files in the above directory are for reference only and are not the standard answers.
-
-> Note
-> This example result was generated by the service agent using Qwen3.5-397B-A17B. Specifically, it used the service agent prompt provided in the run/prompts.py, with thinking mode disabled. Parameters such as temperature were set to the default values for Qwen3.5-397B-A17B. The video was provided as a publicly accessible video_url, rather than being converted to Base64 encoding. 
-
 
 Each JSON file contains:
 - `task_id`: Task identifier
@@ -296,7 +276,7 @@ Each JSON file contains:
 ### Evaluation Results
 
 Evaluation results are saved to `eval_result/{model_name}/`:
-The files in the following directory are only for reference.
+
 ```
 eval_result/
 └── Qwen3.5-397B-A17B/
@@ -310,9 +290,6 @@ Each evaluation file contains:
 - `result_based.success_rate`: Whether tool results are correct
 - `joint_success.success_rate`: Both tool and result are correct
 - `micro_tool_stats.micro_accuracy`: Tool call accuracy
-
-> [NOTE]
-> Evaluation is based on the benchmark-provided database and tool outputs in this repository. In some cases, the dataset values may differ from external real-world knowledge sources. During evaluation, the benchmark database/tool results are treated as the only ground truth. 
 
 ### Evaluation Criteria
 
@@ -403,6 +380,35 @@ If using URL mode, verify your `VIDEO_URL_MAPPING` is correct:
 ```bash
 export VIDEO_URL_MAPPING='{"retail1.mp4": "https://your-url.com/retail1.mp4"}'
 ```
+
+## Update on Kitchen Scenario Ground Truth Fixes
+
+We reviewed the relevant ground truth annotations across **all kitchen scenarios** and corrected confirmed quantity bugs, along with several ambiguous cases where the original instruction did not clearly specify the required amount.
+
+### What was updated
+
+- Corrected quantity errors in `add_to_shopping_list` annotations to make them consistent with:
+  - recipe requirements,
+  - inventory conditions,
+  - ingredient categories,
+  - storage locations,
+  - and task semantics.
+- Updated related function arguments where necessary (such as `compute_total_nutritions`) to keep them aligned with the corrected ingredient quantities.
+- Revised ambiguous cases in which the instruction asked the agent to add ingredients to the shopping list but did not clearly define the quantity rule.
+
+### Clarification on quantity interpretation
+
+For Kitchen tasks, when an instruction refers to adding an ingredient according to the **original usage amount**, it means:
+
+> the **total amount of that ingredient used in the recipe**
+
+This refers to the total quantity required by the recipe, rather than the current stock level, remaining quantity, or the amount used in a single step.
+
+### Notes
+
+- These updates have been applied to the relevant Kitchen scenario annotations.
+- The purpose of this revision is to improve consistency, correctness, and interpretability of quantity-related ground truth labels used for evaluation.
+
 
 ## Support
 
